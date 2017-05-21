@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// This is our 'server' file
-
 /**
  * Module dependencies.
  */
