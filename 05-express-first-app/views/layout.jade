@@ -1,7 +1,29 @@
 doctype html
 html
   head
+    // variable 'injected' with equals right after tag
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    ul
+      li My Text
+      li.
+        This is a list item with a very long list
+        text inside in a multi-line way, 
+        but you MUST add a dot after the
+        li to make the computer understand this 
+        template syntaxis
+    input(type="text").class-name#anyId
+    // assigning a value directly on the template  
+    - var condition = true
+    // condition it's a var in index.js
+    if condition
+      p It's true'
+    // looping
+    - var anyArray = [1,2,3]
+    each value in anyArray
+      p= value 
+    // block content allow other template files to extend this one
+    // check index.jade
+    //- this comment will be not visible on the html
     block content
