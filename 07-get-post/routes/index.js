@@ -7,10 +7,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/test/:id', function(req, res, next) {
+  // I get the param set on my route url (:id) with req.params.id
   res.render('test', { output: req.params.id});
 })
 
 router.post('/test/submit', function(req, res, next) {
+    // I post the param set on my POST request body (id from the index.hbs form) with req.body.id
   var id = req.body.id;
   res.redirect('/test/' + id);
 });
